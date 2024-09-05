@@ -119,13 +119,13 @@ class KeylayoutParser(object):
         cmd_max = {'command', 'caps?', 'anyShift?', 'anyOption?'}
         cmd_min = {'command'}
 
-        caps_max = {'caps', 'anyShift?', 'command?'}
+        caps_max = {'caps', 'anyShift?', 'command?', 'anyOption?', 'anyControl?'}
         caps_min = {'caps'}
 
-        cmdcaps_max = {'command', 'caps', 'anyShift?'}
+        cmdcaps_max = {'command', 'caps', 'anyShift?', 'anyOption?', 'anyControl?'}
         cmdcaps_min = {'command', 'caps'}
 
-        shiftcaps_max = {'anyShift', 'caps', 'anyOption?'}
+        shiftcaps_max = {'anyShift', 'caps', 'command?', 'anyOption?', 'anyControl?'}
         shiftcaps_min = {'anyShift', 'caps'}
 
         for parent in tree.iter():
