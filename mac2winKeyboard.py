@@ -339,7 +339,7 @@ class KeylayoutParser(object):
         '''
 
         try:
-            output = key_output_dict[self.keymap_assignments[state]]
+            output = key_output_dict[self.keymap_assignments[state]] or '-1'
         except KeyError:
             output = '-1'
         return output
